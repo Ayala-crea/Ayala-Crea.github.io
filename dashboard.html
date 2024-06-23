@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="src/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome untuk ikon -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> <!-- Font Lobster untuk logo -->
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Resep Makanan</h2>
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Ingredients</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <div class="user-profile">
+                    <img src="user-image.jpg" alt="User Profile">
+                    <span>Hi, Hizrian</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <div class="dashboard-welcome">
+                <h2>Selamat Datang di Halaman Dashboard Resep Makanan</h2>
+                <p>Selamat Datang Kembali, nama</p>
+            </div>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>213</h3>
+                    <p>Total Resep Makanan</p>
+                </div>
+                <div class="card">
+                    <h3>Selamat Datang di Halaman Dashboard Resep Makanan</h3>
+                    <p>Selamat Datang Kembali, nama</p>
+                </div>
+            </div>
+            <div class="table-container">
+                <button class="add-button">Tambah Resep</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama Resep</th>
+                            <th>Deskripsi Resep</th>
+                            <th>Bahan Baku</th>
+                            <th>Cara Pembuatan</th>
+                            <th>Gambar</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Resep 1</td>
+                            <td>Deskripsi singkat tentang resep 1</td>
+                            <td>Bahan 1, Bahan 2</td>
+                            <td>Cara pembuatan 1</td>
+                            <td><img src="resep-image1.jpg" alt="Resep 1"></td>
+                            <td><button class="edit-button">Edit</button> <button class="delete-button">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Resep 2</td>
+                            <td>Deskripsi singkat tentang resep 2</td>
+                            <td>Bahan 3, Bahan 4</td>
+                            <td>Cara pembuatan 2</td>
+                            <td><img src="resep-image2.jpg" alt="Resep 2"></td>
+                            <td><button class="edit-button">Edit</button> <button class="delete-button">Delete</button></td>
+                        </tr>
+                        <!-- Add more recipe rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

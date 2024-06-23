@@ -3,11 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tes</title>
+    <title>Modern Home Page</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome untuk ikon -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> <!-- Font Lobster untuk logo -->
 </head>
 <body>
-    <div>
-        tes
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">YourLogo</a>
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="register-btn">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Image -->
+    <div class="main-image">
+        <img src="src/img/home-page.jpg" alt="Main Image">
+        <div class="overlay-text">
+            <h1>Welcome to Our Store</h1>
+            <p>Discover the best products just for you!</p>
+        </div>
     </div>
+
+    <!-- Product List -->
+    <section class="product-list">
+        <h2>Our Products</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Produk</th>
+                        <th>Deskripsi Produk</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product Name 1</td>
+                        <td>Deskripsi singkat tentang produk 1</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>Product Name 2</td>
+                        <td>Deskripsi singkat tentang produk 2</td>
+                        <td>$150</td>
+                    </tr>
+                    <!-- Add more product rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </section>
 </body>
 </html>

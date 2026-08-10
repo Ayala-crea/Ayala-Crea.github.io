@@ -1,63 +1,751 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Home Page</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome untuk ikon -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> <!-- Font Lobster untuk logo -->
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b2f6b" />
+    <meta
+      name="description"
+      content="Portfolio Ahmad Rifki Ayala — Backend Developer, Researcher, dan problem solver yang berfokus pada sistem backend, data, AI, dan solusi digital."
+    />
+    <title>Ahmad Rifki Ayala — Backend Developer & Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="home">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="Beranda Ahmad Rifki Ayala">
+          <span class="brand-name">Portofolio</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Buka navigasi"
+          aria-expanded="false"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+        <nav class="nav-links" aria-label="Navigasi utama">
+          <a class="active" href="#home" data-i18n="nav.home">Home</a>
+          <a href="#about" data-i18n="nav.about">Tentang</a>
+          <a href="#academic" data-i18n="nav.academic">Akademik</a>
+          <a href="#skills" data-i18n="nav.skills">Skills</a>
+          <a href="#projects" data-i18n="nav.projects">Proyek</a>
+          <a href="#research" data-i18n="nav.research">Riset</a>
+          <a href="#contact" data-i18n="nav.contact">Kontak</a>
+        </nav>
+        <div class="nav-actions">
+          <a
+            class="btn btn-small nav-cta"
+            href="#contact"
+            data-i18n="nav.connect"
+            >Mari Terhubung</a
+          >
+          <div class="language-switcher" aria-label="Pilih bahasa">
+            <button
+              class="language-btn active"
+              type="button"
+              data-lang="id"
+              aria-label="Bahasa Indonesia"
+            >
+              ID
+            </button>
+            <span class="language-divider" aria-hidden="true"></span>
+            <button
+              class="language-btn"
+              type="button"
+              data-lang="en"
+              aria-label="English"
+            >
+              EN
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section-pad">
+        <div class="hero-orb orb-one"></div>
+        <div class="hero-orb orb-two"></div>
+        <div class="container hero-grid">
+          <div class="portrait-wrap reveal">
+            <div class="portrait-frame">
+              <img src="./assets/images/profile.jpeg" alt="Ahmad Rifki Ayala" />
+            </div>
+            <div class="portrait-decoration"></div>
+          </div>
+
+          <div class="hero-copy reveal delay-1">
+            <div class="eyebrow">
+              <span></span
+              ><span data-i18n="hero.eyebrow">Halo, selamat datang</span>
+            </div>
+            <div
+              class="role-carousel"
+              aria-live="polite"
+              aria-label="Professional roles"
+            >
+              <div
+                class="role-carousel"
+                aria-live="polite"
+                aria-label="Professional roles"
+              >
+                <h1 class="role-stage">
+                  <span id="dynamic-role">Backend Developer.</span>
+                </h1>
+
+                <h1 class="hero-name">
+                  <em>Ahmad Rifki Ayala.</em>
+                </h1>
+              </div>
+            </div>
+            <p class="hero-lead" data-i18n="hero.lead">
+              Saya membangun sistem backend yang andal, efisien, dan
+              terukur—menggabungkan rekayasa perangkat lunak, data, dan riset
+              untuk menghasilkan solusi yang nyata.
+            </p>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <i data-lucide="layers-3"></i>
+                <div>
+                  <strong>5</strong
+                  ><span
+                    ><span data-i18n="hero.stat.projects"
+                      >Proyek & eksperimen</span
+                    ></span
+                  >
+                </div>
+              </div>
+              <div class="stat">
+                <i data-lucide="briefcase-business"></i>
+                <div>
+                  <strong>R&D</strong
+                  ><span
+                    ><span data-i18n="hero.stat.research"
+                      >Software & research</span
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="featured-wrap">
+              <div class="featured-heading">
+                <span data-i18n="hero.featured">Proyek unggulan</span
+                ><a href="#projects"
+                  ><span data-i18n="hero.viewall">Lihat semua</span>
+                  <i data-lucide="arrow-right"></i
+                ></a>
+              </div>
+              <div class="featured-grid">
+                <a class="featured-card" href="#project-manure"
+                  ><img
+                    src="./assets/images/project-manure.png"
+                    alt="Manure Information dashboard"
+                  />
+                  <div>
+                    <strong>Manure Information</strong
+                    ><span>AI & Analytics</span>
+                  </div></a
+                >
+                <a class="featured-card" href="#project-pbmp"
+                  ><img
+                    src="./assets/images/project-pbmp.png"
+                    alt="PBMP dashboard"
+                  />
+                  <div>
+                    <strong>PBMP</strong><span>Project Monitoring</span>
+                  </div></a
+                >
+                <a class="featured-card" href="#project-toefl"
+                  ><img
+                    src="./assets/images/project-toefl.png"
+                    alt="TOEFL Prep System"
+                  />
+                  <div>
+                    <strong>TOEFL Prep</strong><span>Learning Platform</span>
+                  </div></a
+                >
+              </div>
+            </div>
+            <div class="hero-actions">
+              <a class="btn" href="#projects"
+                ><span data-i18n="hero.explore">Jelajahi Proyek</span>
+                <i data-lucide="arrow-down-right"></i
+              ></a>
+              <a class="btn btn-ghost" href="#about" data-i18n="hero.about"
+                >Tentang Saya</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad soft" id="about">
         <div class="container">
-            <div class="logo">
-                <a href="index.html">Data Barang</a>
+          <div class="section-label" data-i18n="about.label">Tentang Saya</div>
+          <h2 class="section-title">
+            <span data-i18n="about.title">Membangun Solusi Digital yang</span>
+            <em data-i18n="about.accent">Efisien & Bermakna</em>
+          </h2>
+          <div class="about-grid">
+            <div class="about-copy reveal">
+              <p>
+                <span data-i18n="about.p1"
+                  >Saya berfokus pada pengembangan backend, integrasi sistem,
+                  pengolahan data, serta riset terapan. Bagi saya, teknologi
+                  yang baik bukan sekadar berjalan—tetapi harus mudah
+                  dipelihara, aman, dapat dikembangkan, dan benar-benar membantu
+                  pengguna.</span
+                >
+              </p>
+              <p>
+                <span data-i18n="about.p2"
+                  >Dalam setiap proyek, saya mencoba menyeimbangkan kualitas
+                  engineering dengan kebutuhan bisnis: arsitektur yang masuk
+                  akal, API yang jelas, query yang efisien, deployment yang
+                  stabil, serta keputusan berbasis data.</span
+                >
+              </p>
             </div>
-            <div class="nav-links">
-                <a href="login.html" class="login-btn">Login</a>
-                <a href="daftar.html" class="register-btn">Register</a>
+            <div class="principle-grid reveal delay-1">
+              <article>
+                <i data-lucide="badge-check"></i>
+                <div>
+                  <h3>Kualitas kode</h3>
+                  <p>Clean, maintainable, dan mudah diuji.</p>
+                </div>
+              </article>
+              <article>
+                <i data-lucide="users-round"></i>
+                <div>
+                  <h3>Berorientasi pengguna</h3>
+                  <p>Solusi relevan dan memberi dampak.</p>
+                </div>
+              </article>
+              <article>
+                <i data-lucide="lightbulb"></i>
+                <div>
+                  <h3>Belajar berkelanjutan</h3>
+                  <p>Terus mengasah engineering & research.</p>
+                </div>
+              </article>
+              <article>
+                <i data-lucide="messages-square"></i>
+                <div>
+                  <h3>Kolaboratif</h3>
+                  <p>Terbuka terhadap ide, feedback, dan diskusi.</p>
+                </div>
+              </article>
             </div>
+          </div>
         </div>
-    </nav>
+      </section>
 
-    <!-- Main Image -->
-    <div class="main-image">
-        <img src="assets/img/home-page.jpg" alt="Main Image">
-        <div class="overlay-text">
-            <h1>Welcome to Our Store</h1>
-            <p>Discover the best products just for you!</p>
+      <section class="section-pad" id="academic">
+        <div class="container">
+          <div class="section-label" data-i18n="academic.label">Pendidikan</div>
+          <h2 class="section-title">
+            <span data-i18n="academic.title">Latar Belakang</span>
+            <em data-i18n="academic.accent">Akademik</em>
+          </h2>
+          <article class="academic-card reveal">
+            <div class="academic-logo">ULBI</div>
+            <div class="academic-main">
+              <span class="meta" data-i18n="academic.program"
+                >Program Studi</span
+              >
+              <h3>D4 Teknik Informatika</h3>
+              <p>Universitas Logistik dan Bisnis Internasional</p>
+              <div class="academic-summary">
+                <span><i data-lucide="calendar-days"></i> 2022 - 2026</span
+                ><span
+                  ><i data-lucide="graduation-cap"></i> IPK 3.55 / 4.00</span
+                >
+              </div>
+              <div class="academic-tags">
+                <span>Backend Development</span><span>Data Engineering</span
+                ><span>Machine Learning</span><span>Software Architecture</span>
+              </div>
+            </div>
+            <div class="academic-details">
+              <div>
+                <span data-i18n="academic.focusLabel">Fokus</span
+                ><strong>Software Engineering & Applied AI</strong>
+              </div>
+              <div>
+                <span data-i18n="academic.activityLabel">Aktivitas</span
+                ><strong data-i18n="academic.activity"
+                  >Riset, pengembangan aplikasi, dan proyek teknologi</strong
+                >
+              </div>
+              <div>
+                <span data-i18n="academic.statusLabel">Status</span
+                ><strong data-i18n="academic.status"
+                  >Final-year / tugas akhir</strong
+                >
+              </div>
+            </div>
+          </article>
         </div>
-    </div>
+      </section>
 
-    <!-- Product List -->
-    <section class="product-list">
-        <h2>Our Products</h2>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nama Produk</th>
-                        <th>Deskripsi Produk</th>
-                        <th>Harga</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Product Name 1</td>
-                        <td>Deskripsi singkat tentang produk 1</td>
-                        <td>$100</td>
-                    </tr>
-                    <tr>
-                        <td>Product Name 2</td>
-                        <td>Deskripsi singkat tentang produk 2</td>
-                        <td>$150</td>
-                    </tr>
-                    <!-- Add more product rows as needed -->
-                </tbody>
-            </table>
+      <section class="section-pad blue-soft" id="skills">
+        <div class="container">
+          <div class="section-label" data-i18n="skills.label">Kemampuan</div>
+          <h2 class="section-title">Professional <em>Capabilities</em></h2>
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <div class="card-heading">
+                <i data-lucide="code-2"></i>
+                <h3>Technical Skills</h3>
+              </div>
+              <div class="skill-group">
+                <h4>Backend & API</h4>
+                <div class="chips">
+                  <span>Go</span><span>Gin</span><span>PHP</span
+                  ><span>Laravel</span><span>Python</span><span>FastAPI</span
+                  ><span>REST API</span><span>Microservices</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <h4>Database & Messaging</h4>
+                <div class="chips">
+                  <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span
+                  ><span>Redis</span><span>RabbitMQ</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <h4>DevOps & Infrastructure</h4>
+                <div class="chips">
+                  <span>Docker</span><span>Nginx</span><span>Traefik</span
+                  ><span>Jenkins</span><span>Git</span><span>MinIO</span
+                  ><span>Linux</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <h4>Data & Machine Learning</h4>
+                <div class="chips">
+                  <span>Scikit-learn</span><span>CatBoost</span
+                  ><span>XGBoost</span><span>SHAP</span><span>PSO</span
+                  ><span>BRKGA</span>
+                </div>
+              </div>
+            </article>
+            <div class="skill-side">
+              <article class="skill-card reveal delay-1">
+                <div class="card-heading">
+                  <i data-lucide="brain-circuit"></i>
+                  <h3>Soft Skills</h3>
+                </div>
+                <div class="chips large">
+                  <span>Problem Solving</span><span>Analytical Thinking</span
+                  ><span>Communication</span><span>Team Collaboration</span
+                  ><span>Research</span><span>Time Management</span>
+                </div>
+              </article>
+              <article class="skill-card reveal delay-2">
+                <div class="card-heading">
+                  <i data-lucide="languages"></i>
+                  <h3 data-i18n="skills.languages">Bahasa</h3>
+                </div>
+                <div class="language-row">
+                  <span>Indonesia</span><b>Native</b>
+                </div>
+                <div class="language-row">
+                  <span>English</span><b>Professional Working</b>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
-    </section>
-</body>
+      </section>
+
+      <section class="section-pad" id="projects">
+        <div class="container">
+          <div class="section-label" data-i18n="projects.label">Proyek</div>
+          <div class="title-row">
+            <h2 class="section-title">
+              <span data-i18n="projects.title">Karya &</span>
+              <em data-i18n="projects.accent">Kontribusi</em>
+            </h2>
+            <p data-i18n="projects.intro">
+              Beberapa proyek pengembangan aplikasi, dashboard, integrasi
+              sistem, dan riset yang pernah saya kerjakan.
+            </p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card reveal" id="project-pbmp">
+              <div class="project-image">
+                <img
+                  src="./assets/images/project-pbmp.png"
+                  alt="PBMP Dashboard"
+                /><span>Enterprise</span>
+              </div>
+              <div class="project-body">
+                <div class="project-meta">
+                  Project Monitoring · Web Application
+                </div>
+                <h3>PBMP</h3>
+                <p>
+                  <span data-i18n="project.pbmp"
+                    >Platform monitoring program manajemen proyek dengan
+                    dashboard analitik untuk membantu pemantauan progres dan
+                    aktivitas.</span
+                  >
+                </p>
+                <div class="project-tech">
+                  <span>Backend</span><span>Analytics</span
+                  ><span>Dashboard</span>
+                </div>
+                <div class="project-actions">
+                  <a
+                    class="project-btn"
+                    href="https://pbmp.ulbi.ac.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="projects.open">Buka Sistem</span>
+                    <i data-lucide="external-link"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card reveal delay-1">
+              <div class="project-image">
+                <img
+                  src="./assets/images/project-ruang-sehat.png"
+                  alt="Ruang Sehat"
+                /><span>Management System</span>
+              </div>
+              <div class="project-body">
+                <div class="project-meta">Internal System · Operations</div>
+                <h3>Ruang Sekat</h3>
+                <p>
+                  <span data-i18n="project.ruang"
+                    >Sistem pemesanan dan pengelolaan ruang yang mendukung alur
+                    reservasi, administrasi, serta monitoring penggunaan.</span
+                  >
+                </p>
+                <div class="project-tech">
+                  <span>Web App</span><span>Workflow</span><span>Database</span>
+                </div>
+                <div class="project-actions">
+                  <a
+                    class="project-btn"
+                    href="https://ruangsehat.ulbi.ac.id/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="projects.open">Buka Sistem</span>
+                    <i data-lucide="external-link"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card reveal" id="project-toefl">
+              <div class="project-image">
+                <img
+                  src="./assets/images/project-toefl.png"
+                  alt="TOEFL Prep System"
+                /><span>E-Learning</span>
+              </div>
+              <div class="project-body">
+                <div class="project-meta">Learning Platform · Education</div>
+                <h3>TOEFL Prep System</h3>
+                <p>
+                  <span data-i18n="project.toefl"
+                    >Platform persiapan TOEFL yang membantu latihan, simulasi,
+                    pengelolaan materi, dan evaluasi hasil pembelajaran.</span
+                  >
+                </p>
+                <div class="project-tech">
+                  <span>Web</span><span>Assessment</span><span>Learning</span>
+                </div>
+                <div class="project-actions">
+                  <a
+                    class="project-btn"
+                    href="https://ayala-crea.github.io/toefl_capstone/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="projects.open">Buka Sistem</span>
+                    <i data-lucide="external-link"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card reveal delay-1">
+              <div class="project-image">
+                <img
+                  src="./assets/images/project-farmradius.png"
+                  alt="FarmRadius"
+                /><span>Analytics</span>
+              </div>
+              <div class="project-body">
+                <div class="project-meta">Agriculture · Monitoring</div>
+                <h3>FarmRadius</h3>
+                <p>
+                  <span data-i18n="project.farm"
+                    >Dashboard analitik untuk monitoring kondisi pertanian
+                    dengan penyajian informasi yang ringkas dan mudah
+                    dipahami.</span
+                  >
+                </p>
+                <div class="project-tech">
+                  <span>Dashboard</span><span>Data</span
+                  ><span>Agriculture</span>
+                </div>
+                <div class="project-actions">
+                  <a
+                    class="project-btn"
+                    href="https://farm-radius-izpv.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="projects.open">Buka Sistem</span>
+                    <i data-lucide="external-link"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+            <article
+              class="project-card project-featured reveal"
+              id="project-manure"
+            >
+              <div class="project-image">
+                <img
+                  src="./assets/images/project-manure.png"
+                  alt="Manure Information Application"
+                /><span>AI & Data</span>
+              </div>
+              <div class="project-body">
+                <div class="project-meta">
+                  Tugas Akhir · Machine Learning · Optimization
+                </div>
+                <h3>Manure Information</h3>
+                <p>
+                  <span data-i18n="project.manure"
+                    >Sistem informasi berbasis data untuk memprediksi potensi
+                    manure ternak dan mendukung estimasi potensi biogas. Proyek
+                    mengintegrasikan machine learning, optimasi,
+                    interpretabilitas model, dan dashboard informasi.</span
+                  >
+                </p>
+                <div class="project-tech">
+                  <span>Python</span><span>FastAPI</span
+                  ><span>Machine Learning</span><span>PSO</span><span>SHAP</span
+                  ><span>BRKGA</span><span>PostgreSQL</span>
+                </div>
+                <div class="project-actions">
+                  <a
+                    class="project-btn"
+                    href="http://arahome.my.id/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><span data-i18n="projects.open">Buka Sistem</span>
+                    <i data-lucide="external-link"></i
+                  ></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad soft" id="certification">
+        <div class="container">
+          <div class="section-label" data-i18n="cert.label">
+            Pengembangan Profesional
+          </div>
+          <h2 class="section-title">
+            <span data-i18n="cert.title">Sertifikasi &</span>
+            <em data-i18n="cert.accent">Keahlian</em>
+          </h2>
+          <article class="certificate-card reveal">
+            <img
+              src="./assets/images/certificate.png"
+              alt="Sertifikat profesional"
+            />
+            <div>
+              <span class="meta">Continuous Learning</span>
+              <h3>
+                <span data-i18n="cert.heading"
+                  >Pengembangan Kompetensi Teknologi</span
+                >
+              </h3>
+              <p>
+                <span data-i18n="cert.desc"
+                  >Aktif mengikuti pembelajaran dan sertifikasi yang mendukung
+                  pengembangan kompetensi pada software engineering, data,
+                  cloud, dan kecerdasan buatan.</span
+                >
+              </p>
+            </div>
+            <a
+              href="https://drive.google.com/file/d/1Mzn_Qahq4LN4KHzbbbl7fPfieiKatpzv/view?usp=sharing"
+              class="text-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span data-i18n="cert.button">Lihat Sertifikat</span>
+              <i data-lucide="external-link"></i
+            ></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-pad" id="research">
+        <div class="container">
+          <div class="section-label" data-i18n="research.label">
+            Riset & Publikasi
+          </div>
+          <h2 class="section-title">
+            <span data-i18n="research.title">Research &</span>
+            <em>Publications</em>
+          </h2>
+          <article class="research-card reveal">
+            <div class="research-date">
+              Research<br /><strong>Applied AI</strong>
+            </div>
+            <img
+              src="./assets/images/publication.png"
+              alt="Dokumentasi penelitian"
+            />
+            <div class="research-content">
+              <span class="meta">Research Contribution</span>
+              <h3>
+                <span data-i18n="research.heading"
+                  >Machine Learning, Data Analytics, & Sistem Informasi</span
+                >
+              </h3>
+              <p>
+                <span data-i18n="research.desc"
+                  >Minat riset saya berada pada penerapan machine learning,
+                  explainable AI, optimasi, dan pengembangan sistem informasi
+                  untuk menyelesaikan masalah di dunia nyata.</span
+                >
+              </p>
+              <div class="project-tech">
+                <span>Machine Learning</span><span>Explainable AI</span
+                ><span>Optimization</span><span>Information Systems</span>
+              </div>
+              <div class="research-actions">
+                <a
+                  href="https://drive.google.com/file/d/1Pgz750pbyXcekQEc3nfieukUZYmIWwEU/view"
+                  class="project-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><span data-i18n="research.button"
+                    >Lihat Proposal Penelitian</span
+                  >
+                  <i data-lucide="file-text"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-pad contact-wrap" id="contact">
+        <div class="container">
+          <div class="contact-card reveal">
+            <div class="contact-copy">
+              <div class="section-label light" data-i18n="contact.label">
+                Terbuka untuk Kolaborasi
+              </div>
+              <h2>
+                <span data-i18n="contact.title">Mari</span>
+                <em data-i18n="contact.accent">Bekerja Sama</em>
+              </h2>
+              <p data-i18n="contact.desc">
+                Terbuka untuk diskusi teknologi, pengembangan backend, riset,
+                integrasi sistem, maupun peluang kolaborasi profesional.
+              </p>
+              <a class="btn btn-light" href="mailto:ahmadrifkiayala@gmail.com"
+                ><span data-i18n="contact.button">Kirim Pesan</span>
+                <i data-lucide="send"></i
+              ></a>
+            </div>
+            <div class="contact-grid">
+              <a href="mailto:ahmadrifkiayala@gmail.com"
+                ><i data-lucide="mail"></i>
+                <div>
+                  <span>Email</span><strong>ahmadrifkiayala@gmail.com</strong>
+                </div></a
+              >
+              <a
+                href="https://www.linkedin.com/in/ahmadrifkiayala"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i data-lucide="linkedin"></i>
+                <div>
+                  <span>LinkedIn</span
+                  ><strong>linkedin.com/in/ahmadrifkiayala</strong>
+                </div></a
+              >
+              <a href="tel:+6285722697918"
+                ><i data-lucide="phone"></i>
+                <div>
+                  <span data-i18n="contact.phone">Telepon</span
+                  ><strong>+62 857-2269-7918</strong>
+                </div></a
+              >
+              <a
+                href="https://github.com/Ayala-Crea"
+                target="_blank"
+                rel="noreferrer"
+                ><i data-lucide="github"></i>
+                <div>
+                  <span>GitHub</span><strong>github.com/Ayala-Crea</strong>
+                </div></a
+              >
+              <a href="#home"
+                ><i data-lucide="map-pin"></i>
+                <div>
+                  <span data-i18n="contact.base">Basis</span
+                  ><strong>Indonesia</strong>
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-top">
+        <div>
+          <a class="brand footer-brand" href="#home"
+            ><span class="brand-mark">AR</span
+            ><span class="brand-name">Ahmad Rifki Ayala</span></a
+          >
+          <p>Backend Developer · Software Developer · Problem Solver</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about" data-i18n="nav.about">Tentang</a
+          ><a href="#skills" data-i18n="nav.skills">Skills</a
+          ><a href="#projects" data-i18n="nav.projects">Proyek</a
+          ><a href="#research" data-i18n="nav.research">Riset</a
+          ><a href="#contact" data-i18n="nav.contact">Kontak</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> Ahmad Rifki Ayala.</span
+        ><span
+          ><span data-i18n="footer.note"
+            >Dibangun dengan fokus pada detail, performa, dan usability.</span
+          ></span
+        >
+      </div>
+    </footer>
+  </body>
 </html>
